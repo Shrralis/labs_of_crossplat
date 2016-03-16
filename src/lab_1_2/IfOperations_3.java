@@ -10,14 +10,10 @@ import java.io.InputStreamReader;
 public class IfOperations_3 {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader =
-                new BufferedReader(new InputStreamReader(System.in));
         int a, b;
-        System.out.print("Enter a: ");
-        a = Integer.parseInt(reader.readLine());
-        System.out.print("Enter b: ");
-        b = Integer.parseInt(reader.readLine());
-        System.out.println(Math.abs(a) > Math.abs(b) ? a : b);
+        a = args[0].length();
+        b = args[1].length();
+        System.out.println(Math.abs(a) > Math.abs(b) ? args[0] + "(" + a + ")" : args[1] + "(" + b + ")");
         System.out.println(a == b ? "Аргументи рівні" : "Аргументи не рівні");
     }
 }
