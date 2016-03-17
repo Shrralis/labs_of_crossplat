@@ -6,10 +6,10 @@ package lab_1_2;
 public class Quest_33 {
 
     public static void main(String[] args) {
-        int z;
+        int z, k = 1;
         System.out.println("Покрокове значення змінної рівне");
         for (z = -5; z <= 5; z++) {
-            System.out.println("Значення рівне " + z);
+            System.out.println("Крок " + k++ + " - Значення рівне " + z);
         }
     }
 }
