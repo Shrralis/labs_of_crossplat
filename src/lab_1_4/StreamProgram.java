@@ -17,7 +17,7 @@ public class StreamProgram {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        FileInputStream input =new FileInputStream("file.txt");
+        FileInputStream input = new FileInputStream("file.txt");
         byte[] buffer = new byte[64];
         int length = input.read(buffer);
         while (length != -1) {
