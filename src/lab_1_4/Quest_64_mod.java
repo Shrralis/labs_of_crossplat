@@ -14,7 +14,7 @@ public class Quest_64_mod {
         FileReader fReader = new FileReader("./src/lab_1_4/Quest_64_mod.rrs");
         BufferedReader reader = new BufferedReader(fReader);
         String s;
-        int a = Integer.parseInt(reader.readLine().substring(4));
+        int a = Integer.parseInt(reader.readLine().substring(5));               //перший рядок має "0-сектор", в ньому треба починати рахувати з 1!!!!!!!!!!!
         int b = Integer.parseInt(reader.readLine().substring(4));
         fReader = null;
         reader = null;
