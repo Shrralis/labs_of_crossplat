@@ -16,6 +16,6 @@ public class Zavdannja4_1 {
         do {
             c = (char) br.read();
             System.out.println(c);
-        } while (c != '5');
+        } while (c != 'q');
     }
 }
