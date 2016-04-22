@@ -70,8 +70,8 @@ public class PseudoMinesweeper {
         do {
             System.out.print("Рядок: ");
             s = reader.readLine();
-            if (s.isEmpty() || Integer.parseInt(s) > field[0].length || Integer.parseInt(s) <= 0) System.out.println("Такого рядка не існує!");
-        } while (s.isEmpty() || Integer.parseInt(s) > field[0].length || Integer.parseInt(s) <= 0);
+            if (s.isEmpty() || Integer.parseInt(s) > field.length || Integer.parseInt(s) <= 0) System.out.println("Такого рядка не існує!");
+        } while (s.isEmpty() || Integer.parseInt(s) > field.length || Integer.parseInt(s) <= 0);
         y = Integer.parseInt(s);
         if (field[y - 1][x - 1] == 0) {
             field[y - 1][x - 1] = -1;

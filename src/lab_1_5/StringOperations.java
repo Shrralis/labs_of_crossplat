@@ -67,7 +67,7 @@ public class StringOperations {
     }
 
     private static void point4_6(boolean keyboard) throws IOException {
-        System.out.println("Виконання пункту " + (keyboard ? "4" : "5, 6") + ": \n\n");
+        System.out.println("Виконання пункту " + (!keyboard ? "4" : "5, 6") + ": \n\n");
 
         String a = "StringOperations";
         String b= new String("StringOperations");

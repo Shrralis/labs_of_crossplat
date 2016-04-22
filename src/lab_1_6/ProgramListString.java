@@ -1,5 +1,8 @@
 package lab_1_6;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +11,7 @@ import java.util.List;
  */
 public class ProgramListString {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<String> strings = new ArrayList<String>();
         List<String> strings2 = new ArrayList<String>();
         point14(strings);
@@ -20,6 +23,7 @@ public class ProgramListString {
         System.out.println("containsString: " + containsString(strings, "world"));
         reverse(strings);
         System.out.println(strings);
+        point28(strings, strings2);
     }
 
     private static void point14(List<String> strings) {
@@ -93,5 +97,18 @@ public class ProgramListString {
         strings.addAll(temp);
     }
 
-    /*TODO: finish point 28*/
+    private static void point28(List<String> strings, List<String> strings2) throws IOException {
+        System.out.println("Кількість елементів в першому списку = " + strings.size());
+        System.out.println("Кількість елементів в другому списку = " + strings2.size());
+        System.out.print("Який обрати список для подальшої роботи? (1 або 2, інакше - вихід): ");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(reader.readLine());
+        if (a != 1 && a != 2) {
+            return;
+        }
+        for (String line : (a == 1 ? strings : strings2)) {
+            System.out.println(line);
+        }
+        System.out.println("Останній індекс елемента \"world\" = " + (a == 1 ? strings : strings2).lastIndexOf("world"));
+    }
 }
